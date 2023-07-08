@@ -19,3 +19,9 @@
   box-shadow: var(--shadow);
   border-radius: 10px;
 }
+
+@media (max-width: 1024px) {
+  .inner-container {
+    text-align: center;
+  }
+}

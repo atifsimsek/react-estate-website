@@ -1,5 +1,6 @@
 import { HiLocationMarker } from "react-icons/hi";
 import "./hero.css";
+import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section className="hero-wrapper">
@@ -8,11 +9,18 @@ const Hero = () => {
         <div className="hero-left flexColStart">
           <div className="hero-title">
             <div className="orange-circle"></div>
-            <h1>
+            <motion.h1
+              initial={{ y: "2rem", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 2,
+                type: "spring",
+              }}
+            >
               Discover <br />
               Most Suitable <br />
               Property
-            </h1>
+            </motion.h1>
           </div>
           <div className="hero-des flexColStart">
             <span className="secondaryText">
@@ -54,9 +62,17 @@ const Hero = () => {
         </div>
         {/* right side */}
         <div className="hero-right flexCenter">
-          <div className="image-container">
+          <motion.div
+            className="image-container"
+            initial={{ x: "7rem", opacity: 0 }}
+            animate={{ x: "0rem", opacity: 1 }}
+            transition={{
+              duration: 2,
+              type: "spring",
+            }}
+          >
             <img src="./hero-image.png" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -13,6 +13,9 @@
 .c-left {
   gap: 0.5rem;
 }
+.c-right {
+  width: 100%;
+}
 
 .contactModes {
   margin-top: 2rem;
@@ -65,4 +68,24 @@
 .c-right {
   width: 100%;
   gap: 1.6rem;
+}
+
+@media (max-width: 1024px) {
+  .c-container {
+    flex-direction: column;
+  }
+
+  .c-right {
+    justify-content: center !important;
+  }
+  .contactModes {
+    width: 100%;
+  }
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+  .mode {
+    width: 100%;
+  }
 }
